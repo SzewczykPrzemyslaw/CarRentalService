@@ -26,16 +26,8 @@ dependencies {
     implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
 
     runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.slf4j:slf4j-api'
 
-    // Lombok
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-
-    // Immutables
-    compileOnly 'org.immutables:value:2.12.1'
-    annotationProcessor 'org.immutables:value:2.12.1'
-
-    // Testing
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 
     testImplementation 'org.spockframework:spock-core:2.4-groovy-4.0'

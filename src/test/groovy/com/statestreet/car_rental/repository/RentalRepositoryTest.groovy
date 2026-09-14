@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.test.context.jdbc.Sql
 import org.springframework.transaction.annotation.Transactional
 import spock.lang.Specification
 
@@ -13,10 +12,6 @@ import java.time.Instant;
 
 @SpringBootTest
 @ActiveProfiles("test")
-@Sql(
-        scripts = "/sql/schema-test.sql",
-        executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD
-)
 @Transactional
 class RentalRepositoryTest extends Specification {
 

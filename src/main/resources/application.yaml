@@ -6,3 +6,7 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    com.statestreet.car_rental: DEBUG
