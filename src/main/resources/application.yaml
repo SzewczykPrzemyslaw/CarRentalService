@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: car-rental
+  datasource:
+    url: jdbc:postgresql://localhost:6432/car_rental_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver

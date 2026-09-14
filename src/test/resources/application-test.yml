@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6432/car_rental_db
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      mode: always

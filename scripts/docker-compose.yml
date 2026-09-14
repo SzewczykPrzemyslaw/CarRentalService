@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:15.19
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: car_rental_db
+    ports:
+      - "6432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./02-data.sql:/docker-entrypoint-initdb.d/02-data.sql
+
+volumes:
+  postgres_data:
