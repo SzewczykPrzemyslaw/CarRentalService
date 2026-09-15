@@ -21,7 +21,6 @@ public final class SqlQuery {
                     AND r.start_date_time < :endDateTime
                     AND r.end_date_time > :startDateTime
               )
-            LIMIT 10
             """;
 
     public static final String LOCK_CAR = """
